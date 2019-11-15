@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="EWHTriggerListener.cs" />
     <Compile Include="EWHTriggerSender.cs" />
+    <Compile Include="INameResolver.cs" />
     <Compile Include="IWCFTriggerService.cs" />
     <Compile Include="MSMQTriggerListener.cs" />
     <Compile Include="MSMQTriggerSender.cs" />
+    <Compile Include="NameResolver.cs" />
     <Compile Include="WCFBasicTriggerListener.cs" />
     <Compile Include="WCFBasicTriggerSender.cs" />
     <Compile Include="ITriggerSender.cs" />

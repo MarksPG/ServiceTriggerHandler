@@ -12,7 +12,7 @@ namespace ElseTriggerHandler
         public void SetUp(string service, int key)
         {
             var uri = GetUri(service, key);
-            var host = new ServiceHost(typeof(), uri);
+            var host = new ServiceHost(typeof(WCFTriggerServiceClient), uri);
             host.Open();
         }
 
@@ -20,7 +20,7 @@ namespace ElseTriggerHandler
 
         public bool Wait(TimeSpan timeOut)
         {
-            return name.WaitOne(timeOut);
+            return WCFTrigger.WCFTriggerService.elseReset.WaitOne(timeOut);
             
         }
     }
