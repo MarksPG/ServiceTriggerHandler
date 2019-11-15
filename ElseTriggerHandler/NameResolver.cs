@@ -8,9 +8,11 @@ namespace ElseTriggerHandler
 {
     class NameResolver : INameResolver
     {
-        public string GetTriggerName()
+        private string triggerName;
+
+        public string GetTriggerName(string service, int key)
         {
-            return triggerName
+            return triggerName;
         }
     }
 }

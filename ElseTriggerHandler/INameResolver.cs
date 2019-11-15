@@ -8,6 +8,6 @@ namespace ElseTriggerHandler
 {
     interface INameResolver
     {
-        string GetTriggerName()
+        string GetTriggerName(string service, int key);
     }
 }

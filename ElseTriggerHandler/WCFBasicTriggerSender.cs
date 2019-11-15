@@ -8,10 +8,10 @@ namespace ElseTriggerHandler
 {
     public class WCFBasicTriggerSender : ITriggerSender
     {
-
+        INameResolver resolver = new NameResolver();
         public string GetName(string service, int key)
         {
-            return name;
+            return resolver.GetTriggerName(service, key);
         }
 
         public void Send(string name)
