@@ -10,7 +10,7 @@ namespace ElseTriggerHandler
     {
         public string GetName(string service, int key)
         {
-
+            return "Temporary";
         }
 
         public void Send(string name)

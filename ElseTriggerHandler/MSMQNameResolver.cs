@@ -8,11 +8,11 @@ namespace ElseTriggerHandler
 {
     class MSMQNameResolver : INameResolver
     {
-        private string triggerName;
+        //private string triggerName;
 
         public string GetTriggerName(string service, int key)
         {
-            return triggerName;
+            return $"Hejochhå!";
         }
     }
 }

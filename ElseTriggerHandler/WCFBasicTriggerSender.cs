@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElseTriggerHandler
 {
-    public class WCFBasicTriggerSender : ITriggerSender
+    class WCFBasicTriggerSender : ITriggerSender
     {
         INameResolver resolver = new WCFBasicNameResolver();
         public string GetName(string service, int key)

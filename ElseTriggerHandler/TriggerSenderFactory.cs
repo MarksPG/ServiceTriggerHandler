@@ -13,9 +13,9 @@ namespace ElseTriggerHandler
     //    Msmq
     //}
 
-    abstract class TriggerSenderFactory
+    public class TriggerSenderFactory
     {
-        public ITriggerSender CreateConnectionType(TransportType transportType)
+        public ITriggerSender CreateTransportType(TransportType transportType)
 
         {
             switch (transportType)

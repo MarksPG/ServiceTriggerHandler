@@ -8,7 +8,7 @@ namespace ElseTriggerHandler
 {
     class WCFBasicNameResolver : INameResolver
     {
-        private string triggerName;
+        //private string triggerName;
 
         public string GetTriggerName(string service, int key)
         {

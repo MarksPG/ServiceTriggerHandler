@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ElseTriggerHandler
 {
-    enum TransportType
+    public enum TransportType
     {
         Ewh,
         WcfBasic,
         Msmq
     }
 
-    abstract class TriggerListenerFactory
+    public static class TriggerListenerFactory
     {
-        public ITriggerListener CreateConnectionType(TransportType connectionType)
+        public static ITriggerListener CreateTransportType(TransportType connectionType)
 
         {
             switch (connectionType)

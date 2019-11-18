@@ -12,7 +12,7 @@
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IWCFTriggerService")]
-public interface IWCFTriggerService
+interface IWCFTriggerService
 {
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
@@ -23,13 +23,13 @@ public interface IWCFTriggerService
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-public interface IWCFTriggerServiceChannel : IWCFTriggerService, System.ServiceModel.IClientChannel
+interface IWCFTriggerServiceChannel : IWCFTriggerService, System.ServiceModel.IClientChannel
 {
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-public partial class WCFTriggerServiceClient : System.ServiceModel.ClientBase<IWCFTriggerService>, IWCFTriggerService
+partial class WCFTriggerServiceClient : System.ServiceModel.ClientBase<IWCFTriggerService>, IWCFTriggerService
 {
     
     public WCFTriggerServiceClient()

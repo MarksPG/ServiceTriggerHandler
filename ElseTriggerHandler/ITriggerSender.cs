@@ -8,7 +8,7 @@ using System.ServiceModel;
 namespace ElseTriggerHandler
 {
     [ServiceContract]
-    interface ITriggerSender
+    public interface ITriggerSender
     {
         [OperationContract]
         string GetName(string service, int key = -1);

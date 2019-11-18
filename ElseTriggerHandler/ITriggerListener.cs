@@ -8,7 +8,7 @@ using System.ServiceModel;
 namespace ElseTriggerHandler
 {
     [ServiceContract]
-    interface ITriggerListener
+    public interface ITriggerListener
     {
         [OperationContract]
         void SetUp(string service, int key);
