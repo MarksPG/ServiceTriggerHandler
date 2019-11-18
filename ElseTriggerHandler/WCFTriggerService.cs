@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WCFTrigger
 {
-    public class WCFTriggerService : IWCFTriggerService
+    class WCFTriggerService : IWCFTriggerService
     {
         public static AutoResetEvent elseReset = new AutoResetEvent(false);
 
