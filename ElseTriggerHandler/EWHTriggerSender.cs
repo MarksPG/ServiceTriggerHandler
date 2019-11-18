@@ -9,9 +9,12 @@ namespace ElseTriggerHandler
 {
     class EWHTriggerSender : ITriggerSender
     {
+        
         public string GetName(string service, int key)
         {
-            return name;
+            var resolver = new EWHNameResolver();
+            var nameString = resolver.GetTriggerName(service, key);
+            return nameString;
         }
 
         public void Send(string name)

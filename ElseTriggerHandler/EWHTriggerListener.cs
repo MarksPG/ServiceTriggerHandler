@@ -13,7 +13,9 @@ namespace ElseTriggerHandler
 
         public void SetUp(string service, int key)
         {
-            ewh = new EventWaitHandle(false, EventResetMode.AutoReset, name);
+            var resolver = new EWHNameResolver();
+            var nameString = resolver.GetTriggerName(service, key);
+            ewh = new EventWaitHandle(false, EventResetMode.AutoReset, nameString);
         }
 
         public bool Wait(TimeSpan timeOut)

@@ -8,7 +8,7 @@ namespace ElseTriggerHandler
 {
     public class WCFBasicTriggerSender : ITriggerSender
     {
-        INameResolver resolver = new NameResolver();
+        INameResolver resolver = new WCFBasicNameResolver();
         public string GetName(string service, int key)
         {
             return resolver.GetTriggerName(service, key);
@@ -17,8 +17,10 @@ namespace ElseTriggerHandler
         public void Send(string name)
         {
 
-            using (var client = new WCFTriggerServiceClient(name));
-            client.
+            using (var client = new WCFTriggerServiceClient(name))
+            {
+                client.Ping();
+            }
         }
     }
 }

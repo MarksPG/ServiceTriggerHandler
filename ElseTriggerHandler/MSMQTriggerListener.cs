@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace ElseTriggerHandler
 {
-    class MSMQTriggerListener
+    class MSMQTriggerListener : ITriggerListener
     {
+        public void SetUp(string service, int key)
+        {
+            
+        }
+
+        public bool Wait(TimeSpan timeOut)
+        {
+            return true;
+        }
+
+
     }
 }

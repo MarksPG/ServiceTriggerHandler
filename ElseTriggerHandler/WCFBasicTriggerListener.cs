@@ -11,7 +11,7 @@ namespace ElseTriggerHandler
     {
         public void SetUp(string service, int key)
         {
-            var resolver = new NameResolver();
+            var resolver = new WCFBasicNameResolver();
             
             var uri = resolver.GetTriggerName(service, key);
             var host = new ServiceHost(typeof(WCFTriggerServiceClient), new Uri(uri));

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ElseTriggerHandler
 {
-    class NameResolver : INameResolver
+    class EWHNameResolver : INameResolver
     {
         private string triggerName;
 
         public string GetTriggerName(string service, int key)
         {
-            return triggerName;
+            return $"{service}.{key}";
         }
     }
 }
