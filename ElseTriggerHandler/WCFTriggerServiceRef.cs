@@ -14,12 +14,12 @@
 [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IWCFTriggerService")]
 interface IWCFTriggerService
 {
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IWCFTriggerService/Ping", ReplyAction = "http://tempuri.org/IWCFTriggerService/PingResponse")]
     void Ping();
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
-    System.Threading.Tasks.Task PingAsync();
+
+    //[System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IWCFTriggerService/Ping", ReplyAction = "http://tempuri.org/IWCFTriggerService/PingResponse")]
+    //System.Threading.Tasks.Task PingAsync();
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,14 +55,14 @@ partial class WCFTriggerServiceClient : System.ServiceModel.ClientBase<IWCFTrigg
             base(binding, remoteAddress)
     {
     }
-    
+
     public void Ping()
     {
         base.Channel.Ping();
     }
-    
-    public System.Threading.Tasks.Task PingAsync()
-    {
-        return base.Channel.PingAsync();
-    }
+
+    //public System.Threading.Tasks.Task PingAsync()
+    //{
+    //    return base.Channel.PingAsync();
+    //}
 }
