@@ -8,7 +8,7 @@ namespace ElseTriggerHandler
 {
     class EWHNameResolver : INameResolver
     {
-        //private string triggerName;
+        
 
         public string GetTriggerName(string service, int key)
         {

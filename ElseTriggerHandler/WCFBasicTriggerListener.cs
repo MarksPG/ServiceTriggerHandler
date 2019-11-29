@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 using System.Threading.Tasks;
+using System.ServiceModel.Description;
+using WCFTrigger;
 
 namespace ElseTriggerHandler
 {
@@ -13,9 +15,25 @@ namespace ElseTriggerHandler
         {
             var resolver = new WCFBasicNameResolver();
             
-            var uri = resolver.GetTriggerName(service, key);
-            var host = new ServiceHost(typeof(WCFTriggerServiceClient), new Uri(uri));
-            host.Open();
+
+            Uri baseAddress = new Uri(resolver.GetTriggerName(service, key));
+            ServiceHost serviceHost = new ServiceHost(typeof(WCFTriggerService), baseAddress);
+            
+            serviceHost.AddServiceEndpoint(typeof(IWCFTriggerService), new BasicHttpBinding(), baseAddress);
+
+
+            ServiceMetadataBehavior smb = (ServiceMetadataBehavior)serviceHost.Description.Behaviors.Find<ServiceMetadataBehavior>();
+            if (smb == null)
+            {
+                smb = new ServiceMetadataBehavior();
+                smb.HttpGetEnabled = true;
+                serviceHost.Description.Behaviors.Add(smb);
+            }
+
+            var edf = serviceHost.Description.Behaviors.Find<ServiceDebugBehavior>();
+            edf.IncludeExceptionDetailInFaults = true;
+
+            serviceHost.Open();
         }
 
         

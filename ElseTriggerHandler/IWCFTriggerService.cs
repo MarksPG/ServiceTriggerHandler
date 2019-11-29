@@ -11,6 +11,9 @@ namespace WCFTrigger
     public interface IWCFTriggerService
     {
         [OperationContract]
+        string GetMessage(string name);
+        
+        [OperationContract]
         void Ping();
     }
 }

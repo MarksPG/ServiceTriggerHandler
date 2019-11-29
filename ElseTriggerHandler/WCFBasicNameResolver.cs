@@ -8,11 +8,13 @@ namespace ElseTriggerHandler
 {
     class WCFBasicNameResolver : INameResolver
     {
-        //private string triggerName;
+        
 
         public string GetTriggerName(string service, int key)
         {
-            return $"http://localhost:55859/WCFTriggerService/{service}/{key}";
+            return $"http://localhost:55859/WCFBasicTriggerListener/{service}/{key}";
         }
     }
 }
+
+

@@ -11,6 +11,12 @@ namespace WCFTrigger
     {
         public static AutoResetEvent elseReset = new AutoResetEvent(false);
 
+
+        public string GetMessage(string name)
+        {
+            return "Hello World from " + name + "!";
+        }
+
         public void Ping()
         {
             elseReset.Set();

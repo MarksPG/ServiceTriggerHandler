@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace ElseTriggerHandler
 {
-    //enum ConnectionType
-    //{
-    //    Ewh,
-    //    WcfBasic,
-    //    Msmq
-    //}
-
     public static class TriggerSenderFactory
     {
         public static ITriggerSender CreateTransportType(TransportType transportType)

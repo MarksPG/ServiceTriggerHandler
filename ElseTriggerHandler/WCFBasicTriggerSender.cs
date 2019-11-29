@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
+using WCFServices;
 
 namespace ElseTriggerHandler
 {
@@ -12,8 +13,10 @@ namespace ElseTriggerHandler
         INameResolver resolver = new WCFBasicNameResolver();
         public string GetName(string service, int key)
         {
-            return resolver.GetTriggerName(service, key);
+            return $"{resolver.GetTriggerName(service, key)}";
         }
+
+        
 
         public void Send(string name)
         {
@@ -27,3 +30,5 @@ namespace ElseTriggerHandler
         }
     }
 }
+
+

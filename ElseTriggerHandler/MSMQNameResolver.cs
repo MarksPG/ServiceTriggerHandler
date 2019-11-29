@@ -8,11 +8,16 @@ namespace ElseTriggerHandler
 {
     class MSMQNameResolver : INameResolver
     {
-        //private string triggerName;
+        
 
         public string GetTriggerName(string service, int key)
         {
-            return $"Hejochhå!";
+            string serverpath = ".";
+            string pathName = $@"{serverpath}\Private$\{service}_{key}";
+            
+
+            return pathName;
         }
+
     }
 }
